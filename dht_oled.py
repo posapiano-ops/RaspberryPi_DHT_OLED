@@ -21,7 +21,7 @@ SPI_DEVICE = 0
 
 # Note you can change the I2C address by passing an i2c_address parameter like:
 # disp = Adafruit_SSD1306.SSD1306_128_64(rst=RST, i2c_address=0x3C)
-disp = Adafruit_SSD1306.SSD1306_128_64(rst=RST, i2c_address=0x3C)
+disp = Adafruit_SSD1306.SSD1306_128_64(rst=RST, i2c_bus=3, i2c_address=0x3C)
 
 
 # Initialize library.
@@ -78,7 +78,7 @@ sensor = Adafruit_DHT.DHT11
 
 # Example using a Beaglebone Black with DHT sensor
 # connected to pin P8_11.
-pin = 4
+pin = 22
 
 # Try to grab a sensor reading.  Use the read_retry method which will retry up
 # to 15 times to get a sensor reading (waiting 2 seconds between each retry).
@@ -91,7 +91,7 @@ while True:
 		sleep(5)
 		str_temp = ' {0:0.2f} *C '.format(temperature)	
 		str_hum  = ' {0:0.2f} %'.format(humidity)
-		print('Temp={0:0.1f}*C  Humidity={1:0.1f}%'.format(temperature, humidity))	
+		#print('Temp={0:0.1f}*C  Humidity={1:0.1f}%'.format(temperature, humidity))	
 		draw.rectangle((0,0,width,height), outline=0, fill=0)
 		#disp.clear()
 		#disp.display()		
