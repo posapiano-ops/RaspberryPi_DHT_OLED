@@ -64,8 +64,8 @@ font24 = ImageFont.truetype('Minecraftia.ttf', 24)
 #font = ImageFont.truetype('Minecraftia.ttf', 8)
 
 # Write two lines of text.
-draw.text((x, top),    'Raspberry Pi',  font=font, fill=255)
-draw.text((x, top+18), 'DHTxx', font=font24, fill=255)
+draw.text((x, top),    'KobraGO - Raspberry Pi',  font=font, fill=255)
+draw.text((x, top+18), 'DHT-11', font=font24, fill=255)
 
 
 # Display image.
